@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- PUBLISHER: replace {{TITLE}} and {{DESCRIPTION}} -->
+  <title>{{TITLE}} — WolfmanTRT</title>
+  <meta name="description" content="{{DESCRIPTION}}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Paths assume published file lives at blog/posts/{slug}.html -->
+  <link rel="stylesheet" href="../../css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="wordmark" href="../../index.html">WolfmanTRT</a>
+      <nav aria-label="Primary">
+        <ul class="nav">
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="../../start-here/">Start Here</a></li>
+          <li><a href="../">Blog</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main">
+    <article>
+      <header class="article-header">
+        <!-- PUBLISHER: replace {{TITLE}} -->
+        <h1>{{TITLE}}</h1>
+        <p class="byline">Written by WolfmanTRT</p>
+        <!-- PUBLISHER: replace {{DATE}} (ISO preferred, e.g. 2026-09-13) -->
+        <p class="post-meta"><time datetime="{{DATE}}">{{DATE}}</time></p>
+        <!-- PUBLISHER: replace {{TAGS}} with <li class="tag">...</li> items, or remove ul if none -->
+        <ul class="tags">{{TAGS}}</ul>
+      </header>
+
+      <!-- PUBLISHER: replace {{CONTENT}} with article HTML paragraphs -->
+      <div class="article-body">
+        {{CONTENT}}
+      </div>
+    </article>
+
+    <p><a href="../">&larr; Back to Blog</a></p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <p class="disclaimer">Not medical advice. Talk to your doctor.</p>
+      <p>&copy; WolfmanTRT</p>
+    </div>
+  </footer>
+</body>
+</html>

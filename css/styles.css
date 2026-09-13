@@ -1,0 +1,396 @@
+/* WolfmanTRT — charcoal, off-white, steel blue, amber */
+:root {
+  --charcoal: #1A1A1A;
+  --off-white: #F5F5F5;
+  --steel-blue: #4A90E2;
+  --amber: #F5A623;
+  --muted: #A0A0A0;
+  --border: #2A2A2A;
+  --max-width: 720px;
+  --font: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--charcoal);
+  color: var(--off-white);
+  font-family: var(--font);
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+a {
+  color: var(--steel-blue);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Header / Nav */
+.site-header {
+  border-bottom: 1px solid var(--border);
+  padding: 1rem 1.25rem;
+}
+
+.site-header__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1.5rem;
+}
+
+.wordmark {
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--off-white);
+  text-decoration: none;
+}
+
+.wordmark:hover {
+  color: var(--steel-blue);
+  text-decoration: none;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav a {
+  color: var(--muted);
+  font-size: 0.9375rem;
+  font-weight: 500;
+}
+
+.nav a:hover,
+.nav a[aria-current="page"] {
+  color: var(--off-white);
+}
+
+/* Main */
+.site-main {
+  flex: 1;
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 3rem;
+}
+
+h1 {
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 0 0 1rem;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 2rem 0 0.75rem;
+  letter-spacing: -0.01em;
+}
+
+h3 {
+  font-size: 1.0625rem;
+  font-weight: 600;
+  margin: 1.5rem 0 0.5rem;
+}
+
+p {
+  margin: 0 0 1rem;
+  color: var(--off-white);
+}
+
+.lead {
+  font-size: 1.0625rem;
+  color: var(--muted);
+  margin-bottom: 1.75rem;
+}
+
+.byline {
+  font-size: 0.875rem;
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+}
+
+/* CTAs */
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 1.75rem 0 2.5rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.65rem 1.25rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  font-family: inherit;
+  border-radius: 4px;
+  text-decoration: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.btn:hover {
+  text-decoration: none;
+}
+
+.btn--primary {
+  background: var(--steel-blue);
+  color: var(--off-white);
+}
+
+.btn--primary:hover {
+  filter: brightness(1.08);
+}
+
+.btn--secondary {
+  background: transparent;
+  color: var(--off-white);
+  border-color: var(--border);
+}
+
+.btn--secondary:hover {
+  border-color: var(--steel-blue);
+  color: var(--steel-blue);
+}
+
+/* Pillars */
+.pillars {
+  display: grid;
+  gap: 1.25rem;
+  margin: 2rem 0;
+  list-style: none;
+  padding: 0;
+}
+
+@media (min-width: 560px) {
+  .pillars {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.pillar {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1.25rem;
+}
+
+.pillar h3 {
+  margin-top: 0;
+  color: var(--steel-blue);
+  font-size: 1rem;
+}
+
+.pillar p {
+  margin-bottom: 0;
+  font-size: 0.9375rem;
+  color: var(--muted);
+}
+
+/* Callout / clinician */
+.callout {
+  border-left: 3px solid var(--steel-blue);
+  background: #222;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  border-radius: 0 4px 4px 0;
+}
+
+.callout--safety {
+  border-left-color: var(--amber);
+}
+
+.callout p:last-child {
+  margin-bottom: 0;
+}
+
+.callout strong {
+  color: var(--amber);
+}
+
+/* Roadmap steps */
+.roadmap {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+  counter-reset: step;
+}
+
+.roadmap li {
+  position: relative;
+  padding: 1rem 1rem 1rem 3rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  margin-bottom: 0.75rem;
+  counter-increment: step;
+}
+
+.roadmap li::before {
+  content: counter(step);
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--charcoal);
+  background: var(--steel-blue);
+  border-radius: 50%;
+}
+
+.roadmap .coming-soon {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  margin-left: 0.5rem;
+}
+
+/* Blog list */
+#post-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
+#post-list li {
+  border-bottom: 1px solid var(--border);
+  padding: 1.25rem 0;
+}
+
+#post-list li:first-child {
+  border-top: 1px solid var(--border);
+}
+
+.post-meta {
+  font-size: 0.8125rem;
+  color: var(--muted);
+  margin-bottom: 0.35rem;
+}
+
+.post-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0 0 0.35rem;
+}
+
+.post-title a {
+  color: var(--off-white);
+}
+
+.post-title a:hover {
+  color: var(--steel-blue);
+}
+
+.post-desc {
+  margin: 0;
+  font-size: 0.9375rem;
+  color: var(--muted);
+}
+
+.empty-state {
+  color: var(--muted);
+  font-style: italic;
+  padding: 1.5rem 0;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.75rem;
+  list-style: none;
+  padding: 0;
+}
+
+.tag {
+  font-size: 0.75rem;
+  padding: 0.2rem 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  color: var(--muted);
+}
+
+/* Post article */
+.article-header {
+  margin-bottom: 2rem;
+}
+
+.article-body {
+  margin-bottom: 2rem;
+}
+
+.article-body p:last-child {
+  margin-bottom: 0;
+}
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 1.25rem 1.25rem 2rem;
+  margin-top: auto;
+}
+
+.site-footer__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  font-size: 0.8125rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+.site-footer .disclaimer {
+  color: var(--amber);
+  font-weight: 500;
+}
+
+/* 404 */
+.page-404 {
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.page-404 h1 {
+  font-size: 3rem;
+  color: var(--steel-blue);
+}
