@@ -1,0 +1,5 @@
+## Pages
+- [— WolfmanTRT](/blog/:slug): No description available
+- [Blog — WolfmanTRT](/blog): Notes on TRT literacy, training, recovery, and the work in between — written by WolfmanTRT.
+- [Start Here — WolfmanTRT](/start-here): Five educational steps to take before changing anything — labs, fundamentals, lifestyle, clinician consultation, and tracking. Written by WolfmanTRT.
+- [WolfmanTRT — TRT Literacy, Training & Recovery](/): WolfmanTRT is a personal education project on TRT literacy, training, recovery, and lifestyle — written plainly, without hype.
